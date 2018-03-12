@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>useAbsolute</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .table {
+            display: table;
+        }
+        .table>div {
+            display: table-row;
+        }
+        .table>div>div{
+            display: table-cell;
+        }
+        .table .left {
+            width: 300px;
+            background-color: orange;
+        }
+        .table .right{
+            width: 300px;
+            background-color: grey;
+        }
+        .table .center {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<!--多行多列的方法如下-->
+<div class="wrap table">
+    <div>
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="center">中间的div，高度200px，宽度自适应</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+    </div>
+    <div>
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="center">中间的div，高度200px，宽度自适应</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+    </div>
+
+</div>
+</body>
+</html>

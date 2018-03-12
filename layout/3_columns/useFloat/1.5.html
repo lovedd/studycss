@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float-1.4</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .float .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+        .float .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: grey;
+        }
+        .float .center {
+            background-color: green;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<!--这种写法是不可以的，因为center本身是块级元素，会独占一行。有的小伙伴不理解了，这里明明和浮动挤在一起好嘛~-->
+<!--我们这么看，假设left，center，right在标准流，各占一行，现在浮动left，left脱标，在当前行左平移，center，right往上提了一行，且这个时候left由于浮动是和center有重叠的。-->
+<!--这个时候，我们把right在向右浮动，right会脱标，当前行右平移，去了center下一行的右边。-->
+<div>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="center">中间的div，高度2000000000px，宽度自适应</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+    </div>
+</div>
+</body>
+</html>
+

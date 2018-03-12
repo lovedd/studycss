@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>useAbsolute</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .absolute .left{
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background-color: orange;
+        }
+        .absolute .right{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px;
+            background-color: grey;
+        }
+        .absolute .center {
+            margin-left: 300px;
+            margin-right: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<!--用这种办法还要计算right的top，很麻烦-->
+<div class="wrap absolute">
+    <div class="left">左边的div，高度200px，宽度300px</div>
+    <div class="center">中间的div，高度200px，宽度自适应</div>
+    <div class="right">右边的div，高度200px，宽度300px</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float-1.2</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .float .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+        .float .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: grey;
+        }
+        .float .center {
+            background-color: green;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<!--让中间不定高，由内容撑开-->
+<!--这样，文字内容够多时也不会超出center而失去背景色，除非宽度小于字体宽度-->
+<!--当然，这样的话也有缺点，当right由于宽度变窄到了下一行，当前行文字仍然在中间且没有背景色。-->
+<!--这时，需要响应式布局-->
+<div>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center">中间的div，高度2000000000px，宽度自适应</div>
+    </div>
+</div>
+</body>
+</html>
+

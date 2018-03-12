@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float-1.4</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .float .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+        .float .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: grey;
+        }
+        .float .center {
+            background-color: green;
+            margin-left: 300px;
+            margin-right: 300px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<!--这样可以控制单词打断，避免长单词的影响，但让这一点是根据具体需要来看是否要加上-->
+<div>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center">中间的div，高度2000000000px，宽度自适应</div>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float-1.1</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .float .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+        .float .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: grey;
+        }
+        .float .center {
+            background-color: green;
+        }
+        .float .center1 {
+            height: 100px;
+        }
+        .float .center2 {
+            height: 200px;
+        }
+        .float .center3 {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<!--这个做法初看是没有问题的，但实际上有三个缺点：-->
+<!--1. 首先，可以看到，当center的高度小于或等于left和right的最小值时，是没有影响的。但是如果center的高度大于两者最小高度时，其背景会扩展到两边。-->
+<!--2. 当屏幕宽度缩小到较长的不可分割单词时不能在一行显示时，后面的内容都会到浮动块的下面，且从最左边开始。-->
+<!--3. 有的人觉得不习惯，明明视觉上是左中右，为什么我们在html上要写成左右中，换成左中右是否可以。-->
+<div>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center1">中间的div，高度200px，宽度自适应</div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center2">中间的div，高度200px，宽度自适应</div>
+    </div>
+    <br><br>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center3">中间的div，高度200px，宽度自适应</div>
+    </div>
+</div>
+</body>
+</html>
+

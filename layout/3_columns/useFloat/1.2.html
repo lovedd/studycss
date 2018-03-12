@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float-1.2</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" type="text/css">
+    <style>
+        .wrap {
+            width: 100%;
+        }
+        .float .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+        .float .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: grey;
+        }
+        .float .center {
+            background-color: green;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+        .float .center1 {
+            height: 100px;
+        }
+        .float .center2 {
+            height: 200px;
+        }
+        .float .center3 {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<!--这个做法解决了问题1，也部分解决了问题2-->
+<!--首先center背景色不会再和left和center重叠。-->
+<!--另外当屏幕缩小到center较长的不可分割单词时，不会另起一行，但是会跑到right的区域。当center内容足够多，导致center超出两侧高度时，会超出自己的高度区域，背景色无法覆盖，但是超出部分由于margin存在不会在left和right下方。-->
+<div>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center1">中间的div，高度2000000000px，宽度自适应</div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center2">中间的div，高度200px，宽度自适应</div>
+    </div>
+    <br><br>
+    <div class="wrap float">
+        <div class="left">左边的div，高度200px，宽度300px</div>
+        <div class="right">右边的div，高度200px，宽度300px</div>
+        <div class="center center3">中间的div，高度200px，宽度自适应</div>
+    </div>
+</div>
+</body>
+</html>
+
