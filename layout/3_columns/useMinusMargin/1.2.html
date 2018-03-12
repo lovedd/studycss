@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.2</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" class="href">
+    <style>
+        .wrap {
+            padding: 0 300px;
+            font-size: 0;
+        }
+        .in-line-block > div{
+            /*display: inline-block;*/
+            float: left;
+            font-size: 16px;
+        }
+        .in-line-block .left {
+            margin-left: -300px;
+            width: 300px;
+            background-color: orange;
+         }
+        .in-line-block .right {
+            margin-right: -300px;
+            width: 300px;
+            background-color: gray;
+        }
+        .in-line-block .center {
+            width: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<!--这里注意不要给.wrap设置width:100%;-->
+<!--其实这里使用浮动和inline-block效果是一样的，主要是负的margin-->
+<div class="wrap in-line-block">
+    <div class="left">左边内容</div>
+    <div class="center">中间内容</div>
+    <div class="right">右边内容</div>
+</div>
+</body>
+</html>

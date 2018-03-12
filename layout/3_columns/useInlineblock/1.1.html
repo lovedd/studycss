@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.1</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" class="href">
+    <style>
+        .wrap {
+            font-size: 0;
+        }
+        .in-line-block > div {
+            display: inline-block;
+            font-size: 16px;
+        }
+        .in-line-block .left {
+            width: 300px;
+            position: relative;
+            background-color: orange;
+        }
+        .in-line-block .center {
+            width: 100%;
+            margin: 0 -300px;
+            background-color: green;
+        }
+        .in-line-block .center > div{
+            margin: 0 300px;
+        }
+        .in-line-block .right {
+            width: 300px;
+            position: relative;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<!--不推荐，宽度减小时左右会被挤到下边-->
+<div class="wrap in-line-block">
+    <div class="left">左边div的内容</div>
+    <div class="center">
+        <div>中间div的内容</div>
+    </div>
+    <div class="right">右边div的内容</div>
+</div>
+</body>
+</html>

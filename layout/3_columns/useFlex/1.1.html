@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-1.1</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" class="href">
+    <style>
+        .flex {
+            display: flex;
+        }
+        .flex .left {
+            width: 300px;
+            background-color: orange;
+        }
+        .flex .center {
+            flex: 1;
+            background-color: green;
+
+        }
+        .flex .right {
+            width: 300px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<!--其实对于弹性盒子来讲，宽度足够时，两边宽度才有300px，视口缩小到一定程度时，左右宽度不再有300px,同步变小-->
+<!--另外，如果center里面有个很长的数字或者字母且无法被打断时，两边宽度也没有300px-->
+<div class="wrap flex">
+    <div class="left">左边的div，宽度300px</div>
+    <div class="center">中间的div，宽度自适应</div>
+    <div class="right">右边的div，宽度300px</div>
+</div>
+</body>
+</html>

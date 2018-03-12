@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-1.1</title>
+    <link rel="stylesheet" href="../../../deps/style/normalize.css" class="href">
+    <style>
+        .grid {
+            display: grid;
+            /*grid-template-rows: 200px;*/
+            grid-template-columns: 300px auto 300px;
+        }
+        .grid .left {
+            height: 200px;
+            background-color: orange;
+        }
+        .grid .center {
+            background-color: green;
+
+        }
+        .grid .right {
+            width: 300px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<!--其实对于grid布局来讲，宽度缩小时，center不停缩小直到不能再缩小，从right右边开始逐步隐藏到视口外-->
+<div class="wrap grid">
+    <div class="left">左边的div，宽度300px</div>
+    <div class="center">中间的div，宽度自适应</div>
+    <div class="right">右边的div，宽度300px</div>
+</div>
+</body>
+</html>
