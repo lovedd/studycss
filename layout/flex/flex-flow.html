@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-flow</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .item {
+            background: orange;
+            border: 1px solid blue;
+            width: 40%;
+        }
+        .ff {
+            flex-flow: row wrap;
+        }
+    </style>
+</head>
+<body>
+<!--flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap-->
+<div class="flex ff">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+</body>
+</html>

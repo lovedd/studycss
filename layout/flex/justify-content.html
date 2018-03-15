@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>justify-content</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0
+        }
+        .flex {
+            display: flex;
+        }
+        .item {
+            background: orange;
+            border: 1px solid blue;
+        }
+        .item1 {
+            margin: 10px 10px;
+        }
+        .item2 {
+            margin: 10px 30px;
+        }
+        .item3 {
+            margin: 10px 50px;
+        }
+        .start {
+            justify-content: flex-start;
+        }
+        .end {
+            justify-content: flex-end;
+        }
+        .center {
+            justify-content: center;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        .space-around {
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<!--justify-content属性定义了项目在主轴上的对齐方式-->
+<!--justify-content: flex-start | flex-end | center | space-between | space-around;-->
+<!--以下假设主轴从左到右-->
+
+<!--flex-start（默认值）：左对齐-->
+<div class="flex start">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--flex-end：右对齐-->
+<div class="flex end">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--center： 居中-->
+<div class="flex center">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--space-between：两端对齐，项目(指的是marginbox)之间的间隔都相等-->
+<div class="flex space-between">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+<!--space-around：每个项目(指的是marginbox)两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍-->
+<div class="flex space-around">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+</body>
+</html>

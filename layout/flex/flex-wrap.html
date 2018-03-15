@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-wrap</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .r {
+            flex-direction: row;
+        }
+        .c {
+            flex-direction: column;
+        }
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+        .wrap {
+            flex-wrap: wrap;
+        }
+        .wrap-verse {
+            flex-wrap: wrap-reverse;
+        }
+        .item {
+            background: orange;
+            width: 40%;
+            height: 100px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<!--flex-wrap有四个值：-->
+<!--flex-wrap: nowrap | wrap | wrap-reverse;-->
+<!--默认取 nowrap-->
+
+<!--（默认）：不换行。-->
+<div class="flex r nowrap">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--换行，第一行在上方-->
+<div class="flex r wrap">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--换行，第一行在下方-->
+<div class="flex r wrap-verse">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<!--这个属性只对主轴有用-->
+<div class="flex c wrap">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<div class></div>
+</body>
+</html>

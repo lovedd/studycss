@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-direction</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .r {
+            flex-direction: row;
+        }
+        .rr {
+            flex-direction: row-reverse;
+        }
+        .c {
+            flex-direction: column;
+        }
+        .cr {
+            flex-direction: column-reverse;
+        }
+        .item {
+            background: orange;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<!--flex-direction有四个值：-->
+<!--flex-direction: row | row-reverse | column | column-reverse;-->
+<!--默认取 row-->
+<div class="flex r">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<div class="flex rr">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<div class="flex c">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<div class="flex cr">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+<div class></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-direction</title>
+    <style>
+        .flex {
+            display: flex;
+            height: 60px;
+            border: 1px solid black;
+        }
+        .start {
+            align-items: flex-start;
+        }
+        .end {
+            align-items: flex-end;
+        }
+        .center {
+            align-items: center;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+        .stretch {
+            align-items: stretch;
+        }
+        .item {
+            background: orange;
+            border: 1px solid blue;
+        }
+        .item1 {
+            height: 30px;
+        }
+        .item2 {
+            height: 50px;
+        }
+        .item3 {
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<!--align-items属性定义项目在交叉轴上如何对齐-->
+<!--align-items: flex-start | flex-end | center | baseline | stretch;-->
+<!--默认取 stretch-->
+<!--下面交叉轴从上到下-->
+
+<!--flex-start：交叉轴的起点对齐-->
+<div class="flex start">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+<!--flex-start：交叉轴的终点对齐-->
+<div class="flex end">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+<!--flex-start：交叉轴的中点对齐-->
+<div class="flex center">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+<!--baseline: 项目的第一行文字的基线对齐。-->
+<div class="flex baseline">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+<!--stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。-->
+<div class="flex stretch">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+</div>
+</body>
+</html>
