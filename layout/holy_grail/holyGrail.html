@@ -28,13 +28,17 @@
             background: gray;
             width:190px;
             float:left;
-            margin-left:-190px;
-            position:relative;
-            right:-190px;
+            /*margin-left:-190px;*/
+            /*position:relative;*/
+            /*right:-190px;*/
+            margin-right: -190px;
         }
     </style>
 </head>
 <body>
+<!--1. 三列布局而且保证主内容优先展示-->
+<!--2. 圣杯布局不用增加额外的html元素-->
+<!--3. 屏幕宽度缩小时，样式会乱-->
 <div class="header">Header</div>
 <div class="bd">
     <div class="main">Main</div>
