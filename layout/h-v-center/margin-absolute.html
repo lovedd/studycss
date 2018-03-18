@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负margin + absolute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            /*position: relative;*/
+            background: gray;
+            height: 300px;
+        }
+        .inner {
+            background: blue;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="inner">inner content</div>
+</div>
+</body>
+</html>
